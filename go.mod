@@ -1,4 +1,4 @@
-module github.com/mvrilo/go-redoc
+module github.com/vchitai/go-redoc
 
 go 1.17
 

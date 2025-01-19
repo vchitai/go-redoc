@@ -2,8 +2,8 @@ package main
 
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/mvrilo/go-redoc"
-	echoredoc "github.com/mvrilo/go-redoc/echo"
+	"github.com/vchitai/go-redoc"
+	echoredoc "github.com/vchitai/go-redoc/echo"
 )
 
 func main() {

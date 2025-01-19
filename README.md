@@ -1,7 +1,7 @@
 # go-redoc
 
-[![GoDoc](https://godoc.org/github.com/mvrilo/go-redoc?status.svg)](https://godoc.org/github.com/mvrilo/go-redoc)
-[![Go Report Card](https://goreportcard.com/badge/github.com/mvrilo/go-redoc?_=1)](https://goreportcard.com/report/github.com/mvrilo/go-redoc?_=1)
+[![GoDoc](https://godoc.org/github.com/vchitai/go-redoc?status.svg)](https://godoc.org/github.com/vchitai/go-redoc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vchitai/go-redoc?_=1)](https://goreportcard.com/report/github.com/vchitai/go-redoc?_=1)
 
 `go-redoc` is an embedded OpenAPI documentation ui for Go using [ReDoc](https://github.com/ReDocly/redoc) and Go's [1.16+'s embed package](https://golang.org/pkg/embed/), with middleware implementations for: `net/http`, `gin`, `fiber`, and `echo`.
 
@@ -12,7 +12,7 @@ This package does not generate openapi spec file. Check [this example](_examples
 ## Usage
 
 ```go
-import "github.com/mvrilo/go-redoc"
+import "github.com/vchitai/go-redoc"
 
 ...
 
@@ -30,7 +30,7 @@ doc := redoc.Redoc{
 ```go
 import (
 	"net/http"
-	"github.com/mvrilo/go-redoc"
+	"github.com/vchitai/go-redoc"
 )
 
 ...
@@ -43,8 +43,8 @@ http.ListenAndServe(address, doc.Handler())
 ```go
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/mvrilo/go-redoc"
-	ginredoc "github.com/mvrilo/go-redoc/gin"
+	"github.com/vchitai/go-redoc"
+	ginredoc "github.com/vchitai/go-redoc/gin"
 )
 
 ...
@@ -58,8 +58,8 @@ r.Use(ginredoc.New(doc))
 ```go
 import (
 	"github.com/labstack/echo/v4"
-	"github.com/mvrilo/go-redoc"
-	echoredoc "github.com/mvrilo/go-redoc/echo"
+	"github.com/vchitai/go-redoc"
+	echoredoc "github.com/vchitai/go-redoc/echo"
 )
 
 ...
@@ -73,8 +73,8 @@ r.Use(echoredoc.New(doc))
 ```go
 import (
 	"github.com/gofiber/fiber/v2"
-	"github.com/mvrilo/go-redoc"
-	fiberredoc "github.com/mvrilo/go-redoc/fiber"
+	"github.com/vchitai/go-redoc"
+	fiberredoc "github.com/vchitai/go-redoc/fiber"
 )
 
 ...

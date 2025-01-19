@@ -1,13 +1,13 @@
-module github.com/mvrilo/go-redoc/_examples/gin
+module github.com/vchitai/go-redoc/_examples/gin
 
 go 1.21.5
 
-replace github.com/mvrilo/go-redoc => ../../
+replace github.com/vchitai/go-redoc => ../../
 
 require (
 	github.com/gin-gonic/gin v1.9.1
-	github.com/mvrilo/go-redoc v0.1.5-0.20240119235626-7cdf2a730a86
-	github.com/mvrilo/go-redoc/gin v0.0.0-20240120020317-ab46051c75c6
+	github.com/vchitai/go-redoc v0.1.5-0.20240119235626-7cdf2a730a86
+	github.com/vchitai/go-redoc/gin v0.0.0-20240120020317-ab46051c75c6
 )
 
 require (
