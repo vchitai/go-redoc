@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"path/filepath"
 	"text/template"
 )
 
@@ -21,6 +22,7 @@ type Redoc struct {
 	SpecFS      *embed.FS
 	Title       string
 	Description string
+	RootPath    string
 }
 
 // HTML represents the redoc index.html page
@@ -44,7 +46,7 @@ func (r Redoc) Body() ([]byte, error) {
 	if err = tpl.Execute(buf, map[string]string{
 		"body":        JavaScript,
 		"title":       r.Title,
-		"url":         r.SpecPath,
+		"url":         filepath.Join(r.RootPath, r.SpecPath),
 		"description": r.Description,
 	}); err != nil {
 		return nil, err
